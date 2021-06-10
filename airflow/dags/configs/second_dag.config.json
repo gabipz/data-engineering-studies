@@ -1,0 +1,12 @@
+{
+  "email_to_variables": [
+    "ADE_JIRA_EMAIL"
+  ],
+  "fruits": [
+    "grape",
+    "mango",
+    "pineapple",
+    "apple",
+    "peach"
+  ]
+}

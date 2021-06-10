@@ -1,0 +1,68 @@
+"""
+#### Purpose
+Intended to poke redshift with a simple query to test connection
+#### DAG Dependencies
+None
+#### Inputs
+None
+#### Outputs
+None
+"""
+
+# Imports aqui
+import os
+
+
+# Nome da DAG aqui
+DAG_NAME = '<inserir_nome>'
+
+# Chamada da config aqui, lembrar de usar o método get_dag_config_object sempre \o/
+config = get_dag_config_object(dag_name=DAG_NAME)
+
+# Modelo do default args
+default_args = {
+    'owner': 'ADP',
+    'depends_on_past': False,
+    'catchup': False,
+    'email': [Variable.get(email) for email in config.email_to_variables],
+    'email_on_failure': True,
+    'email_on_retry': False,
+    'retries': 0,
+    'retry_delay': timedelta(seconds=60),
+    'start_date': datetime(year=2020, month=12, day=22),
+    'on_failure_callback': task_fail_slack_alert('SLACK_AIRFLOW_ERROR'),
+}
+
+# Definição da objeto da DAG
+dag = DAG(
+    dag_id=DAG_NAME,
+    description="DAG intended to poke redshift with a simple query to test connection",
+    catchup=False,
+    default_args=default_args,
+    schedule_interval='@once',
+    max_active_runs=1
+)
+
+# Definição da documentação da DAG
+dag.doc_md = __doc__
+
+
+# Definição de Operadores
+
+slack_notification_started_task, slack_notification_finished_task = get_slack_notification_tasks(dag)
+
+poke_op = PythonOperator(
+    task_id='poke_redshift_creditas',
+    python_callable=poke_redshift,
+    op_kwargs={
+        'config': config
+    },
+    pool=config.redshift.pool,
+    dag=dag
+)
+
+
+# Definição do desenho da dAG
+
+slack_notification_started_task >> slack_notification_finished_task
+poke_op >> slack_notification_finished_task
