@@ -19,7 +19,7 @@ services:
 - Postgres (tem imagem pronta)
 - Web Server (Dockerfile)
 
-Além do [docker-compose.yml](docker-compose.yml), também foram criados os arquivos [Dockerfile](Dockerfile) (para construir a imagem do Airflow), o (requirements.txt)[requirements.txt] (com os requerimentos da aplicação) e o [entrypoint.sh](entrypoint.sh) (que é um arquivo executável).
+Além do [docker-compose.yml](docker-compose.yml), também foram criados os arquivos [Dockerfile](Dockerfile) (para construir a imagem do Airflow), o [requirements.txt](requirements.txt) (com os requerimentos da aplicação) e o [entrypoint.sh](entrypoint.sh) (que é um arquivo executável).
 
 ## Rodando a aplicação
 Para "buildar" a aplicação:
