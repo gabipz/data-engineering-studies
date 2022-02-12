@@ -22,11 +22,4 @@ Estudos complementares:
 
 - Infraestrutura como código (Terraform, Cliditas).
 
-## Plano de estudos
-
-- [X] Criar repositório
-
-- [X] Criar imagens Python no Docker (Hello world e outros exercícios)
-
-- [] Exercícios Python
 
