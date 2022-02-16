@@ -14,6 +14,7 @@ IAM > Users > Add users
 
 <img src="../src/terraform_adduser.png" alt="Add user AWS"/>
 
-
-
 https://www.terraform.io/cdktf/concepts/providers-and-resources
+
+Pra rodar o projeto:
+```terraform init```
