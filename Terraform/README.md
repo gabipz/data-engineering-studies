@@ -16,5 +16,8 @@ IAM > Users > Add users
 
 https://www.terraform.io/cdktf/concepts/providers-and-resources
 
-Pra rodar o projeto:
-```terraform init```
+Pra fazer o deploy do projeto, é necessário a seguinte sequência de comandos:
+
+```terraform init``` Primeira vez do projeto
+```terraform plan``` O plan é pra ver quais foram as alterações (log)
+```terraform apply``` Finalmente deployar
