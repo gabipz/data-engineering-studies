@@ -1,6 +1,10 @@
 # Amazon EC2 
 
-Elastic computer é uma máquina virtual
+Elastic Computer Cloud (EC2) é uma máquina virtual.
+
+Uma instância é um servidor virtual na Nuvem AWS.
+
+SSH é o protocolo padrão para o gerenciamento remoto deste tipo de instância.
 
 ```
 EC2 > Instances > Launch Instance > <selecionar máquina> 
