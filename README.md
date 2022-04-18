@@ -21,6 +21,3 @@ Estudos complementares:
 - CI (integração contínua via circle CI, linter, coverage);
 
 - Infraestrutura como código (Terraform, Cliditas).
-
-
-
