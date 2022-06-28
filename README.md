@@ -1,10 +1,10 @@
-# Programa de Aprendizado - Estágio DE-ADP
+# Engenharia de Dados
 
-Repositório destinado aos estudos das ferramentas utilizadas no dia a dia do time de ADP.
+Repositório destinado aos estudos das ferramentas utilizadas em Engenharia de Dados, mais voltados a Plataforma.
 
 ## Descrição
 
-O projeto consiste na simulação do uso de ferramentas do time de ADP. O plano de estudos engloba as seguintes ferramentas: 
+O plano de estudos engloba as seguintes ferramentas: 
 
 - Github (comandos básicos, pull request, code review);
 
