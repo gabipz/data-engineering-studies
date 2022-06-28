@@ -36,7 +36,6 @@
 |`pstree`|Lista processos em hierarquia|
 |`kill <PID>`|Matar o programa|
 |`kill -9 <PID>`|Matar forçadamente o programa|
-
 |`top`|serve para listar os processos do Linux. A diferença entre o top e o ps é que o top atualiza as informações de tempos em tempos.|
 |`killall top`|Mata todos os processos que tem `top`|
 |`bg <numero>`|Joga o progrma no background|
