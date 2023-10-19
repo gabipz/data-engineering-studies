@@ -32,7 +32,9 @@ Para subir a aplicação:
 docker-compose up -d
 ```
 
+## Conceito
 
+Pipeline de dados é um conjunto de ações que realizará o processamento de dados específicos. Exemplo: Extrair dados da previsão do tempo dos próximos 7 dias da cidade de São Paulo e armazenar os dados.
 
 ## Referências
 
