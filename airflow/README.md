@@ -32,9 +32,26 @@ Para subir a aplicação:
 docker-compose up -d
 ```
 
-## Conceito
+## Conceitos
 
 Pipeline de dados é um conjunto de ações que realizará o processamento de dados específicos. Exemplo: Extrair dados da previsão do tempo dos próximos 7 dias da cidade de São Paulo e armazenar os dados.
+
+DAG: fluxo de trabalho (conjunto de tasks)
+
+Task: unidade mais básica da DAG
+
+Operator: blocos de construção de um DAG, eles contêm a lógica de como os dados são processados em um data pipeline e cada task é definida justamente pela instanciação de um operador.
+
+### Arquitetura do airflow
+
+Webserver: apresenta uma interface de usuário que nos permite inspecionar, acionar e acompanhar o comportamento dos DAGs e suas tarefas;
+Pasta de arquivos DAG: armazena os arquivos DAGs criados. Ela é lida pelo agendador e executor;
+
+Scheduler (agendador): lida com o acionamento dos fluxos de trabalho (DAGs) agendados e o envio de tarefas para o executor;
+
+Banco de dados: usado pelo agendador, executor e webserver para armazenar os metadados e status do DAG e suas tarefas;
+
+Executor: lida com as tarefas em execução. O Airflow possui vários executores, mas apenas um é utilizado por vez.
 
 ## Referências
 
