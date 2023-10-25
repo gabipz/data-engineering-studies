@@ -65,6 +65,22 @@ Existem muitos tipos diferentes de operadores disponíveis no Airflow e o trabal
 
 O Airflow tem um conjunto muito extenso de operadores disponíveis. No entanto, se não existir um operador para seu caso de uso, você também pode criar os seus próprios operadores.
 
+#### PythonOperator
+
+Este operador executa funções ou códigos python. Exemplo
+
+```python
+def extrai_dados(data_interval_end)
+    pass
+
+tarefa_1 = PythonOperator(
+    task_id = 'extrai_dados',
+    python_callable = extrai_dados, #chama a função
+    op_kwargs = {'data_interval_end' : '{{data_interval_end.strftime("%Y-%m-%d")}}'} #pega os argumentos utilizados na função
+    )
+
+```
+
 ## Referências
 
 - [Automatizando seu fluxo de trabalho com Airflow](https://medium.com/@gilsondev/automatizando-seu-fluxo-de-trabalho-com-airflow-4dbc1c932dcb)
